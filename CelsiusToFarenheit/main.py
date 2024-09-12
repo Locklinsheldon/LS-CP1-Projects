@@ -8,4 +8,5 @@ f = (c*9/5+32)
 
 int(f)
 
-print(f)
+print("Farenheit:",f)
+print("Celsius:",c)
