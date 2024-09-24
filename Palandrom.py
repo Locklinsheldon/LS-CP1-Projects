@@ -1,3 +1,4 @@
+#Locklin Sheldon, SkillPractice: Palandrom
 pospal = input("Insert Word: ")
 revpal = pospal[::-1]
 print(revpal)
