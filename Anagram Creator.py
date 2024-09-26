@@ -1,9 +1,10 @@
 import random 
 
-To_be_anagrammed = input("Type your anagram here: ")
+def To_be_anagrammed():
+    input("Type a word here: ")
 
-str(To_be_anagrammed)
+num1 = int(random)
 
-random.shuffle(To_be_anagrammed)
+num2 = int(random)
 
-print(To_be_anagrammed)
+print(To_be_anagrammed[num1:num2])
