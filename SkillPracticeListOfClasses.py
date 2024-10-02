@@ -1,0 +1,10 @@
+#Locklin Sheldon SkillPractice: List of classes
+a = ("Geography")
+b = ("CS 1400 A")
+c = ("Biology")
+d = ("Advisory")
+e = ("Digital Media")
+f = ("English")
+g = ("Math")
+list = str([a,b,c,d,e,f,g])
+print(list)

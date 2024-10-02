@@ -25,7 +25,7 @@ if g == "yes":
 h = input("Floor Division?: ")
 if h == "yes":
     print(a//b)
-i = input("Modulo: ")
+i = input("Modulo?: ")
 if i == "yes":
     print(a % b)
 j = input("round?: ")
