@@ -11,7 +11,7 @@ def desipper_sipper(text):
 
 user_input = input("Enter a stringybalingy to mumblejumble: ")
 enc_mess = secrete_sipper(user_input)
-print("Jumbled message:", enc_mess)
+print("Jumbled mess:", enc_mess)
 
 
 print("Your original input was:", user_input)
@@ -19,4 +19,4 @@ print("Your original input was:", user_input)
 
 enc_in = input("Enter an encrypted string to decode: ")
 dec_mess = desipper_sipper(enc_in)
-print("Decoded message:", dec_mess)
+print("Decody message:", dec_mess)
