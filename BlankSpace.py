@@ -1,17 +1,19 @@
-# This function should return the sum of all even numbers in the list, but it returns the wrong value. Find the bug.
+# The function should return True if the number is between 10 and 20 (inclusive), but it doesn't. Find the bug.
 
-def sum_even_numbers(numbers):
+num = input("Number: ")
 
-     sum = 0
+int(num)
 
-     for num in numbers:
+def is_between(num):
 
-          if num % 2 == 0:
+     if num > 10 and num < 20:
 
-               sum += num
+          return True
 
-          else:
+     return False
 
-               return 0
+if True:
+     print("This number is between 10 and 20")
 
-     return sum
+     if False:
+          print("This number is not between 10 and 20")
