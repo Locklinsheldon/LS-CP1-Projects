@@ -1,4 +1,4 @@
-User = ["Locklin", "Nathaniel", "Alexander", "Matthew", "Sigma", "Alpha", "Beta"]
+User = ["Locklin", "LaRose", "Nathaniel", "Alexander", "Matthew", "Sigma", "Alpha", "Beta"]
 
 InList = input("What is your first name?: ")
 
