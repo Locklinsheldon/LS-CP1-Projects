@@ -61,5 +61,7 @@ def RPSchoice():
             print("Your score was:", userscore, "Ai score was:", aiscore)
             break    
         
+        else:
+            print("Invalid choice")        
 RPSchoice()
 
