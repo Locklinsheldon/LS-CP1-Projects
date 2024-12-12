@@ -1,16 +1,54 @@
+import random
+
+inventory = []
+
+goldbag = (0)
+
+playerHP = (100)
+
+playerStrength = random.randint(10, 41)
+
 print("You have been a slave to the Chef Boyardee Factory for years, and it's all thanks to the Rizz Lizards that showed up on that sorrowful day. \nThe eight Rizz Lizard Nobles That rule every piece of real estate in the land of M'ogus have been tormenting the people. Do you want to watch \neverything from the sidelines? Or do you want to step up and do something? Your choice. You can quit your job and head out for adventure, or you \ncan stay and let the land of M'ogus crumble.\n \n")
 
-employment_status = input("stay or leave?: ")
+employment_status = input("stay or leave?: ") # Asks the user if they want to stay or leave
 if employment_status == "stay": 
-    print("Okay. whatever. I guess the land of M'ogus doesn't matter that much.")
-    quit
+    print("The guards notice you thinking deeply about your situation. They are jealous of your ability to think, so the mind controlled guards grab and throw you outside the Boyardee walls.")
+    
 elif employment_status == "leave": 
-    print("Yippee, now the game can begin. \nAs you leave the building, several mind controlled guards grab you and through you outside the Boyardee walls. Now, with your newly found freedom,")
+    print("Yippee, now the game can begin. \nAs you leave the building, several mind controlled guards grab and throw you outside the Boyardee walls. ")
 else:
-    print(" I dont't think that's an option :(")
-    quit
-
+    print(" I can't read it very well, but you probably decided to leave, so as you leave the building, several mind controlled guards grab and throw you outside the Boyardee walls. :(")
+    
 def choice():
+    global inventory, goldbag, playerHP
     while True:
-        print("What would you like to do")
+        print("1. Check inventory")
+        print("2. Look for treasure")
+        print("3. Look for danger")
+        print("4. Travel")
+        
+        ask = input("What would you like to do? (1-4): ")
+        
+        if ask == "1":
+            print("your inventory:", inventory)
+        if ask == "2":
+            rantreas = random.randint(0,11)
+            if rantreas > 5:
+                goldbag += 5
+                print("You now have", str(goldbag), "gold in your goldbag.")
+                if rantreas < 5:
+                    print("You didn't find any treasure :(")
+        if ask == "3":
+            ranenem = random.randint(0,11)
+            if ranenem > 5:
+                print("You have encountered a Rizz Lizard Serf!")
+                print("1. Melee Attack")
+                print("2. Magic attack")
+                print("3. Use Item")
+                print("4. Run Away (like a coward)")
+                enemask = input("What would you like to do? (1-4): ")
+
+        if enemask == "1":
+
+
 choice()
