@@ -6,7 +6,7 @@ goldbag = (0)
 
 playerHP = (100)
 
-playerStrength = random.randint(10, 41)
+
 
 print("You have been a slave to the Chef Boyardee Factory for years, and it's all thanks to the Rizz Lizards that showed up on that sorrowful day. \nThe eight Rizz Lizard Nobles That rule every piece of real estate in the land of M'ogus have been tormenting the people. Do you want to watch \neverything from the sidelines? Or do you want to step up and do something? Your choice. You can quit your job and head out for adventure, or you \ncan stay and let the land of M'ogus crumble.\n \n")
 
@@ -41,14 +41,17 @@ def choice():
         if ask == "3":
             ranenem = random.randint(0,11)
             if ranenem > 5:
-                print("You have encountered a Rizz Lizard Serf!")
+                OppHP = random.randint(10, 201)
+                if OppHP > 100:
+                    enemlevel = "high level"
+                print("You have encountered a", enemlevel,"Rizz Lizard Serf!") #Add other level
                 print("1. Melee Attack")
                 print("2. Magic attack")
-                print("3. Use Item")
-                print("4. Run Away (like a coward)")
-                enemask = input("What would you like to do? (1-4): ")
+                print("3. Run Away (like a coward)")
+                eneask = input("What would you like to do? (1-4): ")
 
-        if enemask == "1":
-
+        if eneask == "1":
+            playerStrength = random.randint(10, 41)
+            
 
 choice()
