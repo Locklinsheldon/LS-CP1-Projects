@@ -39,19 +39,31 @@ def choice():
                 if rantreas < 5:
                     print("You didn't find any treasure :(")
         if ask == "3":
-            ranenem = random.randint(0,11)
-            if ranenem > 5:
-                OppHP = random.randint(10, 201)
-                if OppHP > 100:
-                    enemlevel = "high level"
-                print("You have encountered a", enemlevel,"Rizz Lizard Serf!") #Add other level
-                print("1. Melee Attack")
-                print("2. Magic attack")
-                print("3. Run Away (like a coward)")
-                eneask = input("What would you like to do? (1-4): ")
+            def enemchoice():
 
-        if eneask == "1":
-            playerStrength = random.randint(10, 41)
-            
+                ranenem = random.randint(0,11)
+                if ranenem > 5:
+                    OppHP = random.randint(10, 201)
+                    if OppHP > 100:
+                        enemlevel = "high level"
+                        if OppHP > 50 and OppHP <= 100:
+                            enemlevel = "medium level"
+                            if OppHP <= 50:
+                                enemlevel = "low level"
+                    print("You have encountered a", enemlevel,"Rizz Lizard Serf!")
+                    print("1. Melee Attack")
+                    print("2. Magic attack")
+                    print("3. Run Away (like a coward)")
+                    eneask = input("What would you like to do? (1-4): ")
+
+                if eneask == "1":
+                    playerStrength = random.randint(10, 41)
+                    enemStrength = random.randint(5, 31)
+                    OppHP - playerStrength
+                    print("You hit the enemy and did", str(playerStrength), "damage.")
+                    playerHP - enemStrength
+                    print("The Serf hit you back and dealt", str(enemStrength),"damage.")
+        
+        enemchoice()
 
 choice()
