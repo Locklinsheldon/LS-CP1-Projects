@@ -4,10 +4,11 @@ import random
 inventory = []
 goldbag = 0
 playerHP = 100
+playerStrength = 30
+playerMagic = 30
 
 def melee(OppHP):
-    global playerHP
-    playerStrength = random.randint(10, 41)
+    global playerHP, playerStrength
     enemStrength = random.randint(5, 31)
     OppHP -= playerStrength
     print("You hit the enemy and did", playerStrength, "damage.")
@@ -22,8 +23,8 @@ def melee(OppHP):
     return OppHP
 
 def magic(OppHP):
-    global playerHP
-    playerMagic = random.randint(10, 41)
+    global playerHP, playerMagic
+    
     enemStrength = random.randint(5, 31)
     OppHP -= playerMagic
     print("You magicked at the enemy and did", playerMagic, "damage.")
@@ -73,12 +74,20 @@ def fight():
         print("You didn't find any danger.")
 
 def potion():
+    global playerHP, playerStrength, playerMagic
     potion = ["strength", "health", "magic"]
     ranpot = random.choice(potion)
-    print("The Serf dropped an illegal", ranpot,"potion.") 
-    drink = input("Would you like to drink the highly illegal", ranpot,"potion? Doing so may have consequences... (y/n): ")#Maybe add consequences.
+    print("The Serf dropped an illegal, and highly expiremental", ranpot,"potion.") 
+    drink = input("Would you like to drink the highly illegal, possibly cancerous", ranpot,"potion? Your actions may have consequences... (y/n): ")#Maybe add consequences.
     if drink == "y":
         if ranpot == "strength":
+            playerStrength += 10
+            if ranpot == "health":
+                playerHP += 10
+                if ranpot == "magic":
+                    playerMagic += 10
+                    if drink == "n":
+                        print("Very well... The potion's glass shatters in your hands. Its contents immediatley evaporate and the glass becomes a fine dust on the ground. \nStrength: ", playerStrength, "\nMagic: ", playerMagic, "\nHealth Points: ", playerHP)
 
 print("You have been a slave to the Chef Boyardee Factory for years, and it's all thanks to the Rizz Lizards that showed up on that sorrowful day. \nThe eight Rizz Lizard Nobles that rule every piece of real estate in the land of M'ogus have been tormenting the people. Do you want to watch \neverything from the sidelines? Or do you want to step up and do something? Your choice. You can quit your job and head out for adventure, or you \ncan stay and let the land of M'ogus crumble.\n \n")
 
